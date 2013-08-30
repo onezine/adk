@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :trackable
-  validates_format_of :email,:with => Devise.email_regexp
+  #validates_format_of :email,:with => Devise.email_regexp
   validates_uniqueness_of :email
 
   # Setup accessible (or protected) attributes for your model
