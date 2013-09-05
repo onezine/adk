@@ -5,6 +5,7 @@ ActiveAdmin.register Unit do
   filter :block
   filter :orientation
   filter :availability
+  filter :floorplan
   
   member_action :available do
     unit = Unit.find_by_id(params[:id])
@@ -21,6 +22,7 @@ ActiveAdmin.register Unit do
     column :unit_type  
     column :block  
     column :orientation
+    column :floorplan
     column :availability 
     column 'Availability Actions' do |unit|
 
