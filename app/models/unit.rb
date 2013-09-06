@@ -32,12 +32,10 @@ class Unit < ActiveRecord::Base
     {
       'a' => params['a'][read_attribute(:availability_id)]['n'],
       'ai' => params['a'][read_attribute(:availability_id)]['i'],
-      'air' => params['a'][read_attribute(:availability_id)]['ir'],
       'bt' => params['bt'][params['ut'][read_attribute(:unit_type_id)]['bt']],
       'ut' => params['ut'][read_attribute(:unit_type_id)]['n'],
       'b' => params['b'][read_attribute(:block_id)],
       'i' => params['f'][read_attribute(:floorplan_id)]['i'],
-      'ir' => params['f'][read_attribute(:floorplan_id)]['ir'],
       'n' => read_attribute(:name)
     }
   end
