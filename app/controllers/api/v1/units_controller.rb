@@ -23,10 +23,10 @@ class Api::V1::UnitsController < ApplicationapiController
     UnitType.find(:all, :select => "id, name, bedroom_type_id", :order => 'name ASC').map{ |ut| params['ut'][ut.id] = ut.to_js }
     
     params['f'] = {}
-    Floorplan.find(:all, :select => "id, image_file_name, image_updated_at", :order => 'name ASC').map{ |f| params['f'][f.id] = f.to_js } 
+    Floorplan.find(:all, :select => "id, name", :order => 'name ASC').map{ |f| params['f'][f.id] = f.to_js } 
   
     params['a'] = {}
-    Availability.find(:all, :select => "id, allow_click, image_file_name, image_updated_at", :order => 'name ASC').map{ |a| params['a'][a.id] = a.to_js } 
+    Availability.find(:all, :select => "id, name, allow_click", :order => 'name ASC').map{ |a| params['a'][a.id] = a.to_js } 
     json['a'] = params['a']
     
     json['u'] = {}

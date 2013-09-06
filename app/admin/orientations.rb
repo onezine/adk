@@ -2,6 +2,7 @@ ActiveAdmin.register Orientation do
   menu :priority => 4, :parent => "Manage"
   config.batch_actions = false
   config.filters = false
+  actions :all, :except => [:destroy]
   
   index :download_links => false do
     column :name  

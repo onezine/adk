@@ -2,6 +2,7 @@ ActiveAdmin.register Availability do
   menu :priority => 6, :parent => "Manage"
   config.batch_actions = false
   config.filters = false
+  actions :all, :except => [:destroy]
   
   index :download_links => false do
     column :name  
@@ -13,9 +14,6 @@ ActiveAdmin.register Availability do
     attributes_table do
       row :name
       row :allow_click
-      row :image do
-        image_tag availability.image.url(:non_retina)
-      end
     end
   end
   
@@ -23,7 +21,6 @@ ActiveAdmin.register Availability do
     f.inputs "Details" do
       f.input :name
       f.input :allow_click
-      f.input :image
     end
     f.buttons
   end
