@@ -19,11 +19,11 @@
 				<key>bundle-identifier</key>
 				<string>com.onezine.adk</string>
 				<key>bundle-version</key>
-				<string>1.0.4</string>
+				<string>1.0.5</string>
 				<key>kind</key>
 				<string>software</string>
 				<key>title</key>
-				<string>AdkApp</string>
+				<string>Sky Vue</string>
 			</dict>
 		</dict>
 	</array>
